@@ -1,4 +1,7 @@
-# Spa
+#Descripción
+Este proyecto muestra de forma simple como implementar un pequeño catálogo de productos.
+
+# CatalogApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
