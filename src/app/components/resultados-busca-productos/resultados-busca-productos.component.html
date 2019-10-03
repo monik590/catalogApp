@@ -1,7 +1,7 @@
 <h1> Buscando: <small>{{campoBusqueda}}</small></h1>
 <hr>
 
-<div class="row" *ngIf="heroesEncontrados.length == 0">
+<div class="row" *ngIf="productosEncontrados.length == 0">
   <div class="col-md-12">
     <div class="alert alert-info" role="alert">
         No existen resultados que coincidan con: {{campoBusqueda}}
@@ -10,5 +10,5 @@
 </div>
 
 <div class="card-columns">
-  <app-heroe-tarjeta [heroe] = "hero" [index] ="hero.idx" *ngFor="let hero of heroesEncontrados"></app-heroe-tarjeta>
+  <app-producto-tarjeta [producto] = "producto" [index] ="producto.idx" *ngFor="let producto of productosEncontrados"></app-producto-tarjeta>
 </div>

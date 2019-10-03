@@ -1,0 +1,6 @@
+<h1>Catálogo <small>De productos</small></h1>
+<hr>
+
+<div class="card-columns">
+  <app-producto-tarjeta (productoSeleccionado)="verProducto($event)"[producto] = "producto" [index] ="i" *ngFor="let producto of productos; let i = index"></app-producto-tarjeta>
+</div>

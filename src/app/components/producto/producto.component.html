@@ -1,0 +1,21 @@
+<h1>{{producto.descripcion | uppercase}}<small> ({{ producto.precio}})</small></h1>
+<hr>
+
+<div class="row animated fadeIn fast">
+  <div class="col-md-4">
+     <img class="img-fluid" [src] = producto.imagen [alt]= producto.descripcion>
+        <a [routerLink]="['/productos']" class="btn btn-outline-danger btn-block">Regresar</a>
+  </div>
+
+  <div class="col-md-8">
+    <h3>{{ producto.descripcion }}</h3>
+    <hr>
+    <p>{{ producto.precio}}</p>
+    <div>
+       <img *ngIf="producto.descripcion == 'Marvel'" class=" img-logo" src = "assets/img/marvel.png" alt= "Marvel">
+       <img *ngIf="producto.descripcion == 'DC'"class="img-logo" src = "assets/img/dc.png" alt= "DC">
+    </div>
+
+  </div>
+
+</div>

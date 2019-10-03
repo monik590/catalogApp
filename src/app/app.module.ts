@@ -5,17 +5,17 @@ import { NgModule } from '@angular/core';
 import {APP_ROUTING} from './app.routes';
 
 //services
-import {HeroesService} from './services/heroes.service';
+import {ProductosService} from './services/productos.service';
 
 //components
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
-import { HeoresComponent } from './components/heores/heores.component';
-import { HeroeComponent } from './components/heroe/heroe.component';
-import { ResultadosBuscaHeroesComponent } from './components/resultados-busca-heroes/resultados-busca-heroes.component';
-import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
+import { ProductosComponent } from './components/productos/productos.component';
+import { ProductoComponent } from './components/producto/producto.component';
+import { ResultadosBuscaProductosComponent } from './components/resultados-busca-productos/resultados-busca-productos.component';
+import { ProductoTarjetaComponent } from './components/producto-tarjeta/producto-tarjeta.component';
 
 @NgModule({
   declarations: [
@@ -23,17 +23,17 @@ import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    HeoresComponent,
-    HeroeComponent,
-    ResultadosBuscaHeroesComponent,
-    HeroeTarjetaComponent
+    ProductosComponent,
+    ProductoComponent,
+    ResultadosBuscaProductosComponent,
+    ProductoTarjetaComponent
   ],
   imports: [
     BrowserModule,
     APP_ROUTING
   ],
   providers: [
-    HeroesService
+    ProductosService
   ],
   bootstrap: [AppComponent]
 })
