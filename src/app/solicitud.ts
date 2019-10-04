@@ -8,4 +8,8 @@ export class Solicitud {
     public archivo:string,
     public id?: number
   ) {  }
+
+  setId(idNumber:number){
+    this.id = idNumber;
+  }
 }

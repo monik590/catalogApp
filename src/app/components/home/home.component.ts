@@ -1,14 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { TemplateComponent } from '../template/template.component';
+import { Solicitud }    from '../../solicitud';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html'
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent  {
 
-  constructor() { }
+//  constructor(private activatedRoute:ActivatedRoute) { }
+  solicitudes:Solicitud[] = [];
 
-  ngOnInit() {
-  }
+  // ngOnInit() {
+  //   this.activatedRoute.params.subscribe(
+  //     params =>{
+  //       this.campoBusqueda = params['campoBusqueda'];
+  //       this.productosEncontrados = this._productosService.buscarProducto( params['campoBusqueda']);
+  //     })
+  // }
+
 
 }
