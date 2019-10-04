@@ -53,7 +53,7 @@ export class ProductosService {
 
   constructor() { }
 
-  
+
   getProductos():Producto[]{
     return this.productos;
   }

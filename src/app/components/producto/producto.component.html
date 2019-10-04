@@ -4,18 +4,30 @@
 <div class="row animated fadeIn fast">
   <div class="col-md-4">
      <img class="img-fluid" [src] = producto.imagen [alt]= producto.descripcion>
-        <a [routerLink]="['/productos']" class="btn btn-outline-danger btn-block">Regresar</a>
+     <a *ngIf="producto.cantidadDisponible < 1" [routerLink]="['/solicitud']" class="btn btn-outline-danger btn-block">No hay unidades disponibles</a>
+     <a *ngIf="producto.cantidadDisponible > 0" [routerLink]="['/solicitud']" class="btn btn-outline-success btn-block">Solicitar Producto</a>
+     <a [routerLink]="['/productos']" class="btn btn-outline-success btn-block">Regresar</a>
   </div>
 
   <div class="col-md-8">
-    <h3>{{ producto.descripcion }}</h3>
-    <hr>
-    <p>{{ producto.precio}}</p>
-    <div>
-       <!-- <img *ngIf="producto.descripcion == 'Marvel'" class=" img-logo" src = "assets/img/marvel.png" alt= "Marvel">
-       <img *ngIf="producto.descripcion == 'DC'"class="img-logo" src = "assets/img/dc.png" alt= "DC"> -->
-    </div>
-
+    <form>
+      <h3>{{ producto.descripcion }}</h3>
+      <hr>
+      <div>
+        <div class="form-group row">
+            <label class="col-4 col-form-label">Precio:</label>
+            <div class="col-4">
+              <label class="col-2 col-form-label">{{ producto.precio}}</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-4 col-form-label">Cantidad Disponible</label>
+            <div class="col-4">
+              <label class="col-2 col-form-label">{{ producto.cantidadDisponible}}</label>
+            </div>
+        </div>
+      </div>
+    </form>
   </div>
 
 </div>
