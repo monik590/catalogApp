@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //Routes
 import {APP_ROUTING} from './app.routes';
@@ -11,25 +12,31 @@ import {ProductosService} from './services/productos.service';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
-import { AboutComponent } from './components/about/about.component';
+import { SolicitudComponent } from './components/solicitud/solicitud.component';
 import { ProductosComponent } from './components/productos/productos.component';
 import { ProductoComponent } from './components/producto/producto.component';
 import { ResultadosBuscaProductosComponent } from './components/resultados-busca-productos/resultados-busca-productos.component';
 import { ProductoTarjetaComponent } from './components/producto-tarjeta/producto-tarjeta.component';
+import { TemplateComponent } from './components/template/template.component';
+import { DataComponent } from './components/data/data.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    AboutComponent,
+    SolicitudComponent,
     ProductosComponent,
     ProductoComponent,
     ResultadosBuscaProductosComponent,
-    ProductoTarjetaComponent
+    ProductoTarjetaComponent,
+    TemplateComponent,
+    DataComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     APP_ROUTING
   ],
   providers: [

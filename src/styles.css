@@ -39,3 +39,7 @@ body{
 .fadeIn {
   animation-name: fadeIn;
 }
+
+.sizeImg{
+  width: 50% !important;
+}

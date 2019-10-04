@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "spa": {
+    "catalogapp": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/spa",
+            "outputPath": "dist/catalogapp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -55,18 +55,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "spa:build"
+            "browserTarget": "catalogapp:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "spa:build:production"
+              "browserTarget": "catalogapp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "spa:build"
+            "browserTarget": "catalogapp:build"
           }
         },
         "test": {
@@ -100,7 +100,7 @@
         }
       }
     },
-    "spa-e2e": {
+    "catalogapp-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -108,11 +108,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "spa:serve"
+            "devServerTarget": "catalogapp:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "spa:serve:production"
+              "devServerTarget": "catalogapp:serve:production"
             }
           }
         },
@@ -128,5 +128,5 @@
       }
     }
   },
-  "defaultProject": "spa"
+  "defaultProject": "catalogapp"
 }

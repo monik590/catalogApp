@@ -1,12 +1,11 @@
+
 <div class="card animated fadeIn fast">
- <img class="card-img-top" [src] = producto.imagen [alt]= producto.descripcion>
+ <img class="card-img-top sizeImg" [src] = producto.imagen [alt]= producto.descripcion>
  <div class="card-body">
    <h5 class="card-title">{{producto.descripcion}}</h5>
    <p class="card-text">{{producto.categoria}}</p>
    <p class="card-text"><small class="text-muted">{{producto.precio}}</small></p>
-   <button (click)="verProducto()" type="button"  class="btn btn-outline-primary">
-     Ver más ...
-   </button>
-   <a [routerLink]="['/producto',index]" class="btn btn-outline-primary">Ver más Link </a>
+
+   <a [routerLink]="['/producto',index]" class="btn btn-outline-primary">Ver más grande </a>
  </div>
 </div>
